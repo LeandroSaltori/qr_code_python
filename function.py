@@ -1,12 +1,12 @@
 import qrcode 
 
 
-def generate_qrcode(exten, password, domain):
+def generate_qrcode(exten, password, domain, port):
     img_qrcode = qrcode.make(f"""
     <?xml version="1.0" encoding='utf-8'?>
     <AccountConfig version='1'>
         <Account>
-            <RegisterServer>{domain}</RegisterServer>"
+            <RegisterServer>{domain}:{port}</RegisterServer>"
             <UserID>{exten}</UserID>
             <AuthID>{exten}</AuthID>
             <AuthPass>{password}</AuthPass>
