@@ -18,3 +18,8 @@ Colar o código acima no site:
 https://www.the-qrcode-generator.com/pt/
 
 OBS: Não sei a procedencia do site, se o mesmo armazena os dados/senha.
+
+
+--------------------------
+<Dialplan>{x+|*x+|*++}</Dialplan>
+<RandomPort>0</RandomPort>

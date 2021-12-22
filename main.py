@@ -7,7 +7,7 @@ domain = str(input('Digite o IP/DDNS: '))
 port = 5060
 # correio de voz = 
 
-img = qrcode.make(f"""
+img_qrcode = qrcode.make(f"""
 <?xml version="1.0" encoding='utf-8'?>
 <AccountConfig version='1'>
 	<Account>
@@ -22,5 +22,5 @@ img = qrcode.make(f"""
 </AccountConfig>
 """)
 
-type(img)  # qrcode.image.pil.PilImage
-img.save("qrcode.png")
+type(img_qrcode)  # qrcode.image.pil.PilImage
+img_qrcode.save(f"QRCode-Ramal-{exten}.png")
