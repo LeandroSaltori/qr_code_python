@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding='utf-8'?>
+<AccountConfig version='1'>
+	<Account>
+		<RegisterServer>pabxeuro.ddns.com.br:5060</RegisterServer>"
+		<UserID>900</UserID>
+		<AuthID>900</AuthID>
+		<AuthPass>Pr1sM4@Eurolatina#900</AuthPass>
+		<AccountName>900</AccountName>
+		<DisplayName>900</DisplayName>
+		<Voicemail>*97</Voicemail>
+		</Account>
+</AccountConfig>
+
+#DICA: Gerar QR CODE RAMAL
+
+Consegui gerar o QR Code da seguinte forma aqui.
+Colar o código acima no site:
+https://www.the-qrcode-generator.com/pt/
+
+OBS: Não sei a procedencia do site, se o mesmo armazena os dados/senha.
