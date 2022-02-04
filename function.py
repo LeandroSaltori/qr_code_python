@@ -1,7 +1,5 @@
-import qrcode 
-
-
-def generate_qrcode(exten, password, domain, port):
+def gerar_qrcode(exten, password, domain, port):
+    import qrcode 
     img_qrcode = qrcode.make(f"""
     <?xml version="1.0" encoding='utf-8'?>
     <AccountConfig version='1'>
@@ -17,5 +15,6 @@ def generate_qrcode(exten, password, domain, port):
     </AccountConfig>
     """)
     type(img_qrcode)  # qrcode.image.pil.PilImage
-    return img_qrcode.save(f"QRCode-Ramal{exten}.png")
+    img_qrcode.save(f"QRCode-Ramal{exten}.png")
+    return img_qrcode
    
