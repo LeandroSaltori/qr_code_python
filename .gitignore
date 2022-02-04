@@ -1,5 +1,9 @@
 __pycache__/function.cpython-310.pyc
 
+# Ignorando as pastas no Github
+
+__pycache__/
 venv/
 temp/
 *.log
+tempCodeRunnerFile.py
