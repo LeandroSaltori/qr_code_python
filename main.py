@@ -19,14 +19,17 @@ janela = tk.Tk()
 
 janela.title('QR Code - Prisma Telecom')
 
-mensagem = tk.Label(text='Sistema Gerar QRCode Prisma Telecom', font='bold',fg='white', bg='black', width='50', height='1') # Fonte = Batman Forever
-mensagem.pack()
+janela.rowconfigure(0, weight=1)
+janela.columnconfigure([0, 1], weight=1)
+
+mensagem = tk.Label(text='Sistema Gerar QRCode Prisma Telecom', font='bold',fg='white', bg='black', width='35', height='1') # Fonte = Batman Forever
+mensagem.grid(row=0, column=0, columnspan=2, sticky='NSEW')
 
 name_texto = tk.Label(text='Digite o nome do usuário do ramal: ')
-name_texto.pack()
+name_texto.grid(row=1, column=0)
 
 name = tk.Entry()
-name.pack()
+name.grid(row=1, column=1)
 
 # exten = tk.Label(text='Digite o nome do usuário do ramal: ')
 # exten.pack()
