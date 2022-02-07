@@ -1,4 +1,4 @@
-from function import gerar_qrcode
+from function import gerar_qrcode, info_botao
 import tkinter as tk
 
 """
@@ -24,35 +24,47 @@ mensagem = tk.Label(text='Sistema Gerar QRCode Prisma Telecom', font='bold',fg='
 mensagem.grid(row=0, column=0, columnspan=2, sticky='NSEW')
 
 #Nome Ramal
-name_texto = tk.Label(text='Digite o nome do usuário do ramal: ')
-name_texto.grid(row=1, column=0)
-name = tk.Entry()
-name.grid(row=1, column=1)
+nome_texto = tk.Label(text='Digite o nome do usuário do ramal: ')
+nome_texto.grid(row=1, column=0)
+nome = tk.Entry()
+nome.grid(row=1, column=1)
+name = nome.get()
+
 
 #Numero Ramal
-exten_texto = tk.Label(text='Digite o número do ramal: ')
-exten_texto.grid(row=2, column=0)
-exten = tk.Entry()
-exten.grid(row=2, column=1)
+ramal_texto = tk.Label(text='Digite o número do ramal: ')
+ramal_texto.grid(row=2, column=0)
+ramal = tk.Entry()
+ramal.grid(row=2, column=1)
 
 #Senha do ramal
-password_texto = tk.Label(text='Digite a senha do ramal ')
-password_texto.grid(row=3, column=0)
-password = tk.Entry()
-password.grid(row=3, column=1)
+senha_texto = tk.Label(text='Digite a senha do ramal ')
+senha_texto.grid(row=3, column=0)
+senha = tk.Entry()
+senha.grid(row=3, column=1)
 
 #IP / Dominio de registo do ramal
-domain_texto = tk.Label(text='IP/ Dominio:  ')
-domain_texto.grid(row=4, column=0)
-domain = tk.Entry()
-domain.grid(row=4, column=1)
+dominio_texto = tk.Label(text='IP/ Dominio:  ')
+dominio_texto.grid(row=4, column=0)
+dominio = tk.Entry()
+dominio.grid(row=4, column=1)
 
 
+#Porta de Registro do Ramal
+porta_texto = tk.Label(text='Porta(5060):  ')
+porta_texto.grid(row=5, column=0)
+porta = tk.Entry()
+porta.grid(row=5, column=1)
+
+def info_botao():    
+    exten = ramal.get()
+    password = senha.get()
+    domain = dominio.get()
+    port = porta.get()
+    gerar_qrcode(exten,password,domain,port)
+    
 #Gerar Botão
-botao = tk.Button(text='Gerar QR Code', command=gerar_qrcode)
+botao = tk.Button(text='Gerar QR Code', command=info_botao)
 botao.grid(row=7, column=0, columnspan=2, sticky='NSEW')
-
-
-
 
 janela.mainloop()

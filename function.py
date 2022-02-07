@@ -1,4 +1,5 @@
 def gerar_qrcode(exten, password, domain, port):
+    # Esta função gera o QR Code com as informaçoes recebidas do botão.;
     import qrcode 
     img_qrcode = qrcode.make(f"""
     <?xml version="1.0" encoding='utf-8'?>
