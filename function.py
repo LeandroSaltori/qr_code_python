@@ -1,11 +1,11 @@
-def gerar_qrcode(exten, password, domain, port):
+def gerar_qrcode(exten, password, domain, port=5060):
     # Esta função gera o QR Code com as informaçoes recebidas do botão.;
     import qrcode 
     img_qrcode = qrcode.make(f"""
-    <?xml version="1.0" encoding='utf-8'?>
     <AccountConfig version='1'>
         <Account>
             <RegisterServer>{domain}:{port}</RegisterServer>"
+            <OutboundServer>{domain}</OutboundServer>
             <UserID>{exten}</UserID>
             <AuthID>{exten}</AuthID>
             <AuthPass>{password}</AuthPass>
@@ -18,4 +18,5 @@ def gerar_qrcode(exten, password, domain, port):
     type(img_qrcode)  # qrcode.image.pil.PilImage
     img_qrcode.save(f"QRCode-Ramal{exten}.png")
     return img_qrcode
-   
+
+
